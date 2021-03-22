@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -57,7 +58,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--about advantages-->
@@ -110,15 +111,19 @@
                 <h2 class="subtitle">Чем мы занимаемся</h2>
                 <ul class="doing-list list">
                     <li class="doing-item">
-                        <img src="./images/what-are-we-doing/img-1.jpg" alt="Мужчина пишет код" width="370" height="294">
+                        <img src="./images/what-are-we-doing/img-1.jpg" alt="Мужчина пишет код" width="370" 
+                        height="294">
+                        <p class="doing-wrapper-description">Десктопные приложения</p>
                     </li>
                     <li class="doing-item">
                         <img src="./images/what-are-we-doing/img-2.jpg" alt="Женщина держит телефон" width="370"
-                            height="294">
+                        height="294">
+                        <p class="doing-wrapper-description">Мобильные приложения</p>
                     </li>
                     <li class="doing-item">
                         <img src="./images/what-are-we-doing/img-3.jpg" alt="Человек выбирает цвет на планшете" width="370"
-                            height="294">
+                        height="294">
+                        <p class="doing-wrapper-description">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>
@@ -393,5 +398,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="icon-close-btn" width="18" height="18">
+                    <use href="./images/sprite.svg#icon-close-btn"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
